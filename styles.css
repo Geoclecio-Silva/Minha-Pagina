@@ -1,0 +1,377 @@
+/* Definições Globais e Reset Simples - CORES COM MAIS PERSONALIDADE */
+:root {
+    --primary-color: #2c3e50;   /* Cinza/Azul Escuro (mais forte) */
+    --accent-color: #00bcd4;    
+    --soft-bg: #FAF9F6;         /* Fundo Principal Suave (Azul Gelo muito claro) */
+    --secondary-bg: #f4d38a;    /* Fundo Secundário (Branco Puro) */
+    --text-color: #4a4a4a;      
+    --shadow-color: rgba(0, 0, 0, 0.15); 
+    --border-radius-base: 10px; 
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--text-color);
+    line-height: 1.6;
+    
+    /* 1. Fundo principal (Off-White) */
+    background-color: var(--soft-bg); 
+    
+    /* 2. EFEITO DE PONTINHOS NO FUNDO (background-image) */
+    background-image: radial-gradient(#cccccc 1px, transparent 0); /* Pontos cinzas claros */
+    background-size: 25px 25px; /* Define o espaçamento dos pontos */
+    background-attachment: fixed; /* Opcional: mantém os pontos fixos ao rolar */
+}
+
+/* Estilização da Seção HERO */
+.hero {
+    /* Altura mínima de 100% da viewport (tela) - ESSENCIAL */
+    min-height: 100vh; 
+    
+    /* Configuração Flexbox para centralizar o conteúdo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    background-color: var(--secondary-bg); /* Branco Puro para o Hero (cobre os pontinhos) */
+}
+
+.hero-content {
+    max-width: 900px;
+    padding: 20px;
+}
+
+/* Título Principal (H1) */
+.hero h1 {
+    font-size: 3.5rem; /* Tamanho grande no desktop */
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+    color: var(--primary-color); /* Cinza Escuro */
+}
+
+/* Subtítulo */
+.hero .subtitle {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+    opacity: 0.8;
+    color: var(--text-color);
+}
+
+/* CTA - Botão de Ação */
+.cta-button {
+    display: inline-block;
+    background-color: var(--accent-color); /* Ciano Vibrante */
+    color: white; 
+    padding: 15px 30px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 700;
+    border-radius: var(--border-radius-base); /* Cantos Arredondados */
+    transition: background-color 0.3s ease;
+    border: none;
+}
+
+.cta-button:hover {
+    background-color: #008c9e; /* Ciano mais escuro no hover */
+}
+
+.small-text {
+    margin-top: 15px;
+    font-size: 0.85rem;
+    opacity: 0.7;
+    color: var(--primary-color);
+}
+
+/* ======================================================= */
+/* RESPONSIVIDADE (MEDIA QUERY) - Para Telas Menores (Celular) */
+/* ======================================================= */
+@media (max-width: 768px) {
+    
+    /* Reduz o tamanho da fonte do Título no celular */
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+
+    /* Reduz o tamanho da fonte do Subtítulo no celular */
+    .hero .subtitle {
+        font-size: 1rem;
+    }
+    
+    /* Reduz o tamanho do botão no celular */
+    .cta-button {
+        font-size: 1rem;
+        padding: 12px 25px;
+    }
+}
+
+/* Estilos Gerais para todas as Seções */
+section {
+    padding: 60px 20px;
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    /* Por padrão, o background será definido para alternar */
+}
+
+/* Fundo alternado: Portfólio e Skills usam o fundo mais escuro (Off-White) */
+.portfolio {
+    background-color: var(--soft-bg); /* Fundo Off-White */
+    background-image: none;
+}
+
+/* DESTAQUE: Fundo muito suave do Ciano para a seção SKILLS */
+.skills {
+    background-color: #DDE8F3; /* Um ciano extremamente claro */
+    background-image: none;
+}
+/* CTA Final usa o fundo mais claro (Branco Puro) para contraste */
+.cta-final {
+    background-color: var(--secondary-bg);
+    background-image: none; /* REMOVE O EFEITO DE PONTINHOS PARA MANTER O FUNDO SÓLIDO */
+}
+
+
+section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--primary-color); /* Cinza Escuro */
+}
+
+.section-description {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+    opacity: 0.8;
+}
+
+/* ===================================== */
+/* Estilos da Grid do Portfólio */
+/* ===================================== */
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.project-card {
+    background-color: var(--card-bg); /* Fundo do Card Branco Puro */
+    padding: 25px;
+    border-radius: var(--border-radius-base); /* Cantos Arredondados */
+    text-align: left;
+    transition: transform 0.3s ease;
+    border-top: 4px solid var(--accent-color); /* Linha de destaque Ciano */
+    box-shadow: 0 5px 15px var(--shadow-color); /* Sombra mais visível */
+}
+
+.project-card:hover {
+    transform: translateY(-8px); /* Deslocamento notável */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2); /* Sombra mais escura no hover */
+}
+
+.project-card h3 {
+    color: var(--primary-color); /* Cinza Escuro */
+    margin-bottom: 10px;
+    font-size: 1.4rem;
+}
+
+.project-card p {
+    font-size: 0.95rem;
+    color: var(--text-color); /* Texto Escuro */
+    margin-bottom: 20px;
+}
+
+.project-links a {
+    text-decoration: none;
+    padding: 8px 15px;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-right: 10px;
+    display: inline-block;
+}
+
+.link-live {
+    background-color: var(--accent-color); /* Ciano */
+    color: white;
+}
+
+.link-code {
+    background-color: #e9ecef; /* Cinza claro */
+    color: var(--text-color); /* Texto escuro */
+}
+
+.call-more-projects {
+    font-size: 1rem;
+    margin-top: 30px;
+}
+
+.call-more-projects a {
+    color: var(--accent-color); /* Ciano */
+    text-decoration: none;
+    font-weight: 700;
+    transition: color 0.3s;
+}
+
+.call-more-projects a:hover {
+    color: var(--primary-color);
+}
+
+/* ===================================== */
+/* Estilos da Seção Skills */
+/* ===================================== */
+
+.skills-category {
+    margin-bottom: 40px;
+    padding: 20px 0;
+    border-bottom: 1px dashed #dee2e6; /* Separador sutil claro */
+}
+
+.skills-category:last-child {
+    border-bottom: none;
+}
+
+.skills-category h3 {
+    font-size: 1.5rem;
+    color: var(--primary-color); /* Cinza Escuro */
+    margin-bottom: 15px;
+}
+
+.skill-badges {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.badge {
+    padding: 10px 18px;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    box-shadow: 0 2px 4px var(--shadow-color);
+}
+
+/* Cores específicas para os Badges */
+
+.badge-html { background-color: #e34c26; color: white; }
+.badge-css { background-color: #264de4; color: white; }
+.badge-js { background-color: #f7df1e; color: #323330; } 
+
+.badge-bootstrap { background-color: #7952b3; color: white; }
+.badge-tailwind { background-color: #06b6d4; color: white; }
+.badge-react { background-color: #61dafb; color: #20232a; }
+
+.badge-git { background-color: #f14e32; color: white; }
+.badge-wp { background-color: #0073aa; color: white; }
+.badge-figma { background-color: #a259ff; color: white; }
+
+/* ===================================== */
+/* Estilos da Seção CTA Final */
+/* ===================================== */
+
+.cta-final {
+    padding: 80px 20px;
+    margin-top: 40px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px var(--shadow-color); /* Sombra sutil */
+}
+
+.cta-final h2 {
+    color: var(--primary-color);
+}
+
+.section-description-final {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    opacity: 0.9;
+}
+
+/* O botão final é um pouco maior e mais chamativo */
+.cta-button-final {
+    display: inline-block;
+    background-color: var(--accent-color); 
+    color: white;
+    padding: 18px 35px;
+    text-decoration: none;
+    font-size: 1.4rem;
+    font-weight: 700;
+    border-radius: var(--border-radius-base);
+    transition: background-color 0.3s ease, transform 0.2s;
+    border: none;
+    box-shadow: 0 5px 15px rgba(0, 188, 212, 0.5); /* Sombra Ciano para destaque */
+}
+
+.cta-button-final:hover {
+    background-color: #008c9e;
+    transform: translateY(-2px);
+}
+
+.small-contact {
+    margin-top: 20px;
+    font-size: 0.9rem;
+    opacity: 0.7;
+    color: var(--primary-color);
+}
+
+.small-contact a {
+    color: var(--accent-color); /* Ciano */
+    text-decoration: none;
+}
+
+/* ===================================== */
+/* Estilos do Rodapé (Footer) */
+/* ===================================== */
+
+.footer {
+    padding: 20px;
+    background-color: var(--secondary-bg); /* Fundo Branco */
+    border-top: 5px solid #DDE8F3;
+    text-align: center;
+    font-size: 0.8rem;
+    color: var(--text-color); /* Texto Escuro */
+}
+
+.social-links {
+    margin-top: 10px;
+}
+
+.social-links a {
+    color: var(--text-color);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: var(--accent-color); /* Ciano */
+}
+
+.separator {
+    margin: 0 10px;
+}
+
+/* ===================================== */
+/* RESPONSIVIDADE (MEDIA QUERY) */
+/* ===================================== */
+
+@media (max-width: 768px) {
+    .cta-button-final {
+        font-size: 1.2rem;
+        padding: 15px 30px;
+    }
+    .cta-final h2 {
+        font-size: 2rem;
+    }
+    .footer {
+        padding: 15px;
+    }
+}
