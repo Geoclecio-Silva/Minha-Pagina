@@ -2,8 +2,8 @@
 :root {
     --primary-color: #2c3e50;   /* Cinza/Azul Escuro (mais forte) */
     --accent-color: #00bcd4;    
-    --soft-bg: #FAF9F6;         /* Fundo Principal Suave (Azul Gelo muito claro) */
-    --secondary-bg: #f4d38a;    /* Fundo Secundário (Branco Puro) */
+    --soft-bg: #FAF9F6;         /* Fundo Principal Suave */
+    --secondary-bg: #f4d38a;    /* Fundo Secundário */
     --text-color: #4a4a4a;      
     --shadow-color: rgba(0, 0, 0, 0.15); 
     --border-radius-base: 10px; 
@@ -26,7 +26,7 @@ body {
     /* 2. EFEITO DE PONTINHOS NO FUNDO (background-image) */
     background-image: radial-gradient(#cccccc 1px, transparent 0); /* Pontos cinzas claros */
     background-size: 25px 25px; /* Define o espaçamento dos pontos */
-    background-attachment: fixed; /* Opcional: mantém os pontos fixos ao rolar */
+    background-attachment: fixed;
 }
 
 /* Estilização da Seção HERO */
@@ -40,7 +40,7 @@ body {
     align-items: center;
     text-align: center;
     padding: 20px;
-    background-color: var(--secondary-bg); /* Branco Puro para o Hero (cobre os pontinhos) */
+    background-color: var(--secondary-bg);
 }
 
 .hero-content {
@@ -53,7 +53,7 @@ body {
     font-size: 3.5rem; /* Tamanho grande no desktop */
     margin-bottom: 0.5rem;
     line-height: 1.2;
-    color: var(--primary-color); /* Cinza Escuro */
+    color: var(--primary-color);
 }
 
 /* Subtítulo */
@@ -67,19 +67,19 @@ body {
 /* CTA - Botão de Ação */
 .cta-button {
     display: inline-block;
-    background-color: var(--accent-color); /* Ciano Vibrante */
+    background-color: var(--accent-color);
     color: white; 
     padding: 15px 30px;
     text-decoration: none;
     font-size: 1.2rem;
     font-weight: 700;
-    border-radius: var(--border-radius-base); /* Cantos Arredondados */
+    border-radius: var(--border-radius-base);
     transition: background-color 0.3s ease;
     border: none;
 }
 
 .cta-button:hover {
-    background-color: #008c9e; /* Ciano mais escuro no hover */
+    background-color: #008c9e;
 }
 
 .small-text {
@@ -120,9 +120,9 @@ section {
     /* Por padrão, o background será definido para alternar */
 }
 
-/* Fundo alternado: Portfólio e Skills usam o fundo mais escuro (Off-White) */
+/* Fundo alternado: Portfólio e Skills usam o fundo mais escuro */
 .portfolio {
-    background-color: var(--soft-bg); /* Fundo Off-White */
+    background-color: var(--soft-bg);
     background-image: none;
 }
 
@@ -141,7 +141,7 @@ section {
 section h2 {
     font-size: 2.5rem;
     margin-bottom: 0.5rem;
-    color: var(--primary-color); /* Cinza Escuro */
+    color: var(--primary-color);
 }
 
 .section-description {
@@ -167,8 +167,8 @@ section h2 {
     border-radius: var(--border-radius-base); /* Cantos Arredondados */
     text-align: left;
     transition: transform 0.3s ease;
-    border-top: 4px solid var(--accent-color); /* Linha de destaque Ciano */
-    box-shadow: 0 5px 15px var(--shadow-color); /* Sombra mais visível */
+    border-top: 4px solid var(--accent-color); 
+    box-shadow: 0 5px 15px var(--shadow-color); 
 }
 
 .project-card:hover {
@@ -177,14 +177,14 @@ section h2 {
 }
 
 .project-card h3 {
-    color: var(--primary-color); /* Cinza Escuro */
+    color: var(--primary-color);
     margin-bottom: 10px;
     font-size: 1.4rem;
 }
 
 .project-card p {
     font-size: 0.95rem;
-    color: var(--text-color); /* Texto Escuro */
+    color: var(--text-color);
     margin-bottom: 20px;
 }
 
@@ -199,13 +199,13 @@ section h2 {
 }
 
 .link-live {
-    background-color: var(--accent-color); /* Ciano */
+    background-color: var(--accent-color);
     color: white;
 }
 
 .link-code {
-    background-color: #e9ecef; /* Cinza claro */
-    color: var(--text-color); /* Texto escuro */
+    background-color: #e9ecef;
+    color: var(--text-color);
 }
 
 .call-more-projects {
@@ -214,7 +214,7 @@ section h2 {
 }
 
 .call-more-projects a {
-    color: var(--accent-color); /* Ciano */
+    color: var(--accent-color);
     text-decoration: none;
     font-weight: 700;
     transition: color 0.3s;
@@ -240,7 +240,7 @@ section h2 {
 
 .skills-category h3 {
     font-size: 1.5rem;
-    color: var(--primary-color); /* Cinza Escuro */
+    color: var(--primary-color);
     margin-bottom: 15px;
 }
 
@@ -324,7 +324,7 @@ section h2 {
 }
 
 .small-contact a {
-    color: var(--accent-color); /* Ciano */
+    color: var(--accent-color);
     text-decoration: none;
 }
 
@@ -334,7 +334,7 @@ section h2 {
 
 .footer {
     padding: 20px;
-    background-color: var(--secondary-bg); /* Fundo Branco */
+    background-color: var(--secondary-bg);
     border-top: 5px solid #DDE8F3;
     text-align: center;
     font-size: 0.8rem;
@@ -352,7 +352,7 @@ section h2 {
 }
 
 .social-links a:hover {
-    color: var(--accent-color); /* Ciano */
+    color: var(--accent-color);
 }
 
 .separator {
@@ -374,4 +374,23 @@ section h2 {
     .footer {
         padding: 15px;
     }
+}
+
+
+.project-card img {
+    /* Garante que a imagem preencha o cartão */
+    width: 100%; 
+    /* Garante que a imagem mantenha sua proporção e não fique distorcida */
+    height: auto; 
+    /* Adiciona um pequeno espaçamento abaixo da imagem */
+    margin-bottom: 15px; 
+    /* Arredonda os cantos superiores para um visual mais limpo */
+    border-radius: 8px 8px 0 0; 
+    /* Garante que a imagem não ultrapasse o contêiner */
+    display: block; 
+}
+
+/* Para evitar que a imagem estoure o cartão, caso o cartão tenha um padding ou box-shadow, e garantir que a borda arredondada da imagem não seja cortada. */
+.project-card {
+    overflow: hidden; 
 }
